@@ -1,0 +1,53 @@
+:root{
+    --black: #161616;
+    --white: #ececec;
+    --red: #ef5350;
+    --blue: #001FFF;
+    --yellow: #ffdf00;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--black);
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+    display: block;
+}
+
+
+
+/* ///////////////////////
+///////BUTTON ONE */
+
+.buttonOne{
+    border: 5px solid var(--blue);
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttonOne::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--yellow);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: transform 1s;
+}
+
+.buttonOne:hover::before{
+    transform: rotate(0deg);
+}
