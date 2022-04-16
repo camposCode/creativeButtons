@@ -9,30 +9,32 @@
 body{
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
     font-size: 45px;
     font-family: 'Raleway', sans-serif;
     background-color: var(--black);
 }
 
+section{
+    margin-top: 125px;
+}
+
 a{
     text-decoration: none;
     color: var(--blue);
     display: block;
+    border: 5px solid var(--blue);
+    padding: 40px 80px;
+    position: relative;
+    overflow: hidden;
 }
 
 
 
 /* ///////////////////////
 ///////BUTTON ONE */
-
-.buttonOne{
-    border: 5px solid var(--blue);
-    padding: 40px 80px;
-    position: relative;
-    overflow: hidden;
-}
 
 .buttonOne::before{
     content: '';
@@ -51,3 +53,32 @@ a{
 .buttonOne:hover::before{
     transform: rotate(0deg);
 }
+
+/* ///////////////////////
+///////BUTTON TWO */
+
+.buttonTwo{
+    transition: all 1s;
+}
+
+.buttonTwo::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--blue);
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.buttonTwo:hover{
+    color: var(--yellow);
+}
+
+.buttonTwo:hover::before{
+    transform: translateX(0);
+}
+
