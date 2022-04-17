@@ -122,4 +122,28 @@ a{
 .buttonThree:hover::after{
     transform: rotateY(0deg);
 }
+/* ///////////////////////
+///////BUTTON FOUR */
 
+.buttonFour{
+    transition: 1s;
+}
+
+.buttonFour::before{
+     content: 'How cool am I?';
+     color: var(--blue);
+     background-color: var(--yellow);
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     transform: translateY(-100%);
+     transition: all 1s;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.buttonFour:hover::before{
+    transform: translateY(0);
+}
